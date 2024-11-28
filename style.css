@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Comic Sans MS',cursive; sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f7e6ff;
+    --header-color:#ffccf9;
+    --sidebar-color: #e0b3ff;
+    --text-color: #5a005a;
+    --highlight-color: #ff66b2;
+    --accent-color:#b366ff;
+    --btn-color-start:#ff99cc;
+    --btn-color-end:#cc99ff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    position: relative;
+}
+
+section {
+    min-height: 100vh;
+    padding: 12rem 8% 2rem;
+}
+
+.heart-bg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    background-color: var(accent-color);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0.3;
+    z-index:  -1;
+}
+
+/* Header Section Code */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 8%;
+    background-color:var(--header-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+    transition: all 0.3s;
+   
+
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.logo:hover {
+    color: var(accent-color);
+header nav ul {
+    display: flex ;
+    list-style: none;
+}
+    
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: white ;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 8px 16px ;
+    border-radius: 5px;
+}
+header nav ul li a:hover {
+    background-color: #ffd700;
+    color: #000 ;
+}
+.navbar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--sidebar-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    transition: left 0.3s;
+    border-radius: 0 20px 20px 0;
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 1rem;
+    transition: color 0.3s;
+}
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 1rem;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+}
+.navbar.open {
+    left: 0;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--highlight-color);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#menu-icon:hover {
+    transform: rotate(90deg);
+}
+.nav-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(45deg,var(--btn-color-start),var(--btn-color-end));
+    color: var(--text-color);
+    border-radius: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0. 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+    }
+}
